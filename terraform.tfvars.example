@@ -1,0 +1,12 @@
+username = "root"
+password = "suse1234"
+
+clustername = "prd"
+registryusername = "rke2-harvester"
+registrypassword = "Z6mQwgGmKZzEos27UPTf"
+kubernetesversion = "v1.25.9+rke2r1"
+stage = "rke-prod"
+registry01 = "registry01.suse"
+registry02 = "registry02.suse:5000"
+clustercidr = "10.42.0.0/16"
+servicescidr = "10.43.0.0/16"

@@ -1,0 +1,6 @@
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfvars
+server.txt
+files/rootCA.suse.crt
