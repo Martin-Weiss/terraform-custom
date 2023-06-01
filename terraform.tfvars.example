@@ -1,3 +1,7 @@
+api_url = "https://rancher.suse"
+access_key = "token-shl86"
+secret_key = "nmll6h48cj6klljqldgwkcpf9r28kgccrblx4n5vqtjkb9hzttxfz8"
+
 username = "root"
 password = "suse1234"
 

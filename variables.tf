@@ -2,6 +2,12 @@ variable "clustername" {
   description = "Clustername dev,sit,uat,prd"
 }
 
+variable "api_url" {
+}
+variable "access_key" {
+}
+variable "secret_key" {
+}
 variable "username" {
 }
 variable "password" {

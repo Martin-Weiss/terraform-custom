@@ -1,8 +1,8 @@
 # Configure the Rancher2 provider to admin
 provider "rancher2" {
-  api_url    = "https://rancher.suse"
-  access_key = "token-shl86"
-  secret_key = "nmll6h48cj6klljqldgwkcpf9r28kgccrblx4n5vqtjkb9hzttxfz8"
+  api_url    = var.api_url
+  access_key = var.access_key
+  secret_key = var.secret_key
 }
 terraform {
   required_providers {
