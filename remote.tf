@@ -36,6 +36,7 @@ resource "null_resource" "registration" {
   for_each = { for inst in local.instances : inst.servername => inst }
 
   provisioner "remote-exec" {
+    when = create
     connection {
       host = each.value.servername
       user = var.username
@@ -54,4 +55,21 @@ resource "null_resource" "registration" {
       )
     ]
   }
+
+  provisioner "remote-exec" {
+    when = destroy
+    connection {
+      host     = self.triggers.host
+      agent    = true
+      user     = self.triggers.username
+      password = self.triggers.password
+    }
+
+    inline = [
+      "sudo sed -i 's#rm -rf /var/lib/kubelet#rm -rf /var/lib/kubelet || true#g' /usr/local/bin/rke2-uninstall.sh",
+      "sudo rancher-system-agent-uninstall.sh",
+      "sudo rke2-uninstall.sh"
+    ]
+  }
+
 }
